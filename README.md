@@ -4,4 +4,5 @@
 ## Ссылки
 - [Публичная страница на GitHub Pages](https://cactussw.github.io/web_pr2/)
 ##
-Использованные технологии - HTML5
+Использованные технологии - HTML5, CSS(OOCSS)
+

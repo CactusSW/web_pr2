@@ -9,27 +9,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header bg-white">
+    <header class="header bg-white" id="about">
         <img class="logo" src="assets/icons/logo.png" alt="Логотип магазина">
         <img class="cart" src="assets/icons/shopping-car.png" alt="Корзина">
         <img class="banner" src="assets/img/banner.png" alt="Баннер">
 
-        <nav class="nav">
-            <ul class="list flex gap-md">
-                <li class="list-item"><a class="link" href="#">Ссылка1</a></li>
-                <li class="list-item"><a class="link" href="#">Ссылка2</a></li>
-                <li class="list-item"><a class="link" href="#">Ссылка3</a></li>
-                <li class="list-item"><a class="link" href="#">Ссылка4</a></li>
-                <li class="list-item"><a class="link" href="#">Ссылка5</a></li>
-                <li class="list-item"><a class="link" href="#">Ссылка6</a></li>
-            </ul>
-        </nav>
+    <nav class="nav">
+        <ul class="list flex gap-md">
+            <li class="list-item"><a class="link" href="#about">О кофе</a></li>
+            <li class="list-item"><a class="link" href="#advantages">Преимущества</a></li>
+            <li class="list-item"><a class="link" href="#products">Вкусы</a></li>
+            <li class="list-item"><a class="link" href="#giftset">Подарки</a></li>
+            <li class="list-item"><a class="link" href="#combo">Комбо</a></li>
+            <li class="list-item"><a class="link" href="#footer">Контакты</a></li>
+        </ul>
+    </nav>
 
         <h1 class="hero-title">Ваш персонализированный кофе</h1>
     </header>
 
     <main class="main">
-        <section class="section container">
+        <section class="section container" id="advantages">
             <h3 class="section-subtitle">Ваш персонализированный кофе</h3>
             <h2 class="section-title">Кофе сделанный по вашим желаниям</h2>
 
@@ -60,7 +60,7 @@
             </ul>
         </section>
 
-        <section class="section bg-light">
+        <section class="section bg-light" id="products">
             <div class="container">
                 <h3 class="section-subtitle">Выбери свой любимый</h3>
                 <h2 class="section-title">Правильный вкус</h2>
@@ -89,7 +89,7 @@
                     </article>
 
                     <article class="card product padding-md border rounded bg-white">
-                        <img class="product-img" src="assets/img/pack-red.png" alt="Красный пакет">
+                        <img class="product-img" src="assets/img/pack-orange.png" alt="Оранжевый пакет">
                         <p class="price">139.000</p>
                         <h3 class="card-title">REVO Origin</h3>
                         <p class="text">сладковатое послевкусие, немного горьковатое, кисло-клубничное</p>
@@ -113,7 +113,7 @@
             </div>
         </section>
 
-        <section class="section container">
+        <section class="section container" id="giftset">
             <h3 class="section-subtitle">Лучший подарок для друга</h3>
             <h2 class="section-title">Подарочный набор</h2>
 
@@ -144,7 +144,7 @@
             </article>
         </section>
 
-        <section class="section bg-light">
+        <section class="section bg-light" id="combo">
             <div class="container">
                 <h3 class="section-subtitle">Ваш персонализированный кофе</h3>
                 <h2 class="section-title">Комбо-наборы</h2>
@@ -187,7 +187,7 @@
         </section>
     </main>
 
-    <footer class="footer container">
+    <footer class="footer container" id="footer">
         <p class="text">© Revo Coffee Việt Nam - 2018</p>
     </footer>
 </body>
