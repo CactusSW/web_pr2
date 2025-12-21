@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap');
+
+:root{
+  --bg:#f3f6f9;
+  --white:#fff;
+  --light:#f7f7f7;
+  --text:#1c2530;
+  --muted:#6b7785;
+  --primary:#2f4157;
+  --accent:#b3875b;
+  --line:rgba(0,0,0,.12);
+  --radius:16px;
+  --shadow:0 10px 26px rgba(0,0,0,.12);
+  --tr:.25s ease;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:"Nunito Sans",sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{border:0;background:none;cursor:pointer}
+
+.container{
+  max-width:1120px;
+  margin:0 auto;
+  padding:0 16px;
+}
+.flex{display:flex}
+.grid{display:grid}
+.justify-between{justify-content:space-between}
+.align-center{align-items:center}
+.gap-sm{gap:12px}
+.gap-md{gap:18px}
+.gap-lg{gap:24px}
+.cols-4{grid-template-columns:repeat(4,1fr)}
+
+.bg-white{background:var(--white)}
+.bg-light{background:var(--light)}
+.padding-md{padding:16px}
+.text{color:var(--muted)}
+.price{font-weight:800;color:var(--accent)}
+
+.header{position:relative}
+.banner{width:100%;height:520px;object-fit:cover}
+
+.hero-title{
+  position:absolute;
+  left:40px;
+  bottom:40px;
+  font-family:Montserrat;
+  font-weight:800;
+  text-transform:uppercase;
+  max-width:520px;
+}
+
+.nav{
+  position:absolute;
+  top:120px;
+  right:0;
+  background:var(--primary);
+  padding:20px;
+}
+.link{
+  color:#fff;
+  text-transform:uppercase;
+  font-size:12px;
+  transition:opacity var(--tr),transform var(--tr);
+}
+.link:hover{opacity:.7;transform:translateX(-4px)}
+
+.section{
+  padding:60px 0;
+}
+.section-title{
+  text-align:center;
+  font-family:Montserrat;
+  font-weight:800;
+}
+.section-subtitle{
+  text-align:center;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  font-size:12px;
+  color:var(--muted);
+}
+
+.card{
+  background:#fff;
+  border-radius:var(--radius);
+  border:1px solid var(--line);
+  transition:transform var(--tr),box-shadow var(--tr);
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow);
+}
+
+.card-title{
+  font-family:Montserrat;
+  font-weight:700;
+}
+
+.btn{
+  padding:10px 16px;
+  border-radius:999px;
+  font-weight:700;
+  text-transform:uppercase;
+  font-size:11px;
+}
+.btn-primary{
+  background:var(--accent);
+  color:#fff;
+}
+.btn-primary:hover{opacity:.85}
+.btn-outline{
+  border:1px solid var(--primary);
+  color:var(--primary);
+}
+.btn-outline:hover{
+  background:var(--primary);
+  color:#fff;
+}
