@@ -5,68 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Магазин кофе</title>
 
-    <!-- Подключение стилей -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header bg-white" id="about">
-        <img class="logo" src="assets/icons/logo.png" alt="Логотип магазина">
-        <img class="cart" src="assets/icons/shopping-car.png" alt="Корзина">
+        <div class="header-top container flex justify-between align-center">
+            <img class="logo" src="assets/icons/logo.png" alt="Логотип магазина">
+            <img class="cart" src="assets/icons/shopping-car.png" alt="Корзина">
+        </div>
+
         <img class="banner" src="assets/img/banner.png" alt="Баннер">
 
-    <nav class="nav">
-        <ul class="list flex gap-md">
-            <li class="list-item"><a class="link" href="#about">О кофе</a></li>
-            <li class="list-item"><a class="link" href="#advantages">Преимущества</a></li>
-            <li class="list-item"><a class="link" href="#products">Вкусы</a></li>
-            <li class="list-item"><a class="link" href="#giftset">Подарки</a></li>
-            <li class="list-item"><a class="link" href="#combo">Комбо</a></li>
-            <li class="list-item"><a class="link" href="#footer">Контакты</a></li>
-        </ul>
-    </nav>
+        <nav class="nav nav--overlay">
+            <ul class="nav-list flex gap-md">
+                <li class="nav-item"><a class="link" href="#about">Главная</a></li>
+                <li class="nav-item"><a class="link" href="#advantages">Преимущества</a></li>
+                <li class="nav-item"><a class="link" href="#products">Вкусы</a></li>
+                <li class="nav-item"><a class="link" href="#giftset">Подарки</a></li>
+                <li class="nav-item"><a class="link" href="#combo">Комбо</a></li>
+                <li class="nav-item"><a class="link" href="#footer">Контакты</a></li>
+            </ul>
+        </nav>
 
         <h1 class="hero-title">Ваш персонализированный кофе</h1>
     </header>
 
     <main class="main">
-        <section class="section container" id="advantages">
-            <h3 class="section-subtitle">Ваш персонализированный кофе</h3>
-            <h2 class="section-title">Кофе сделанный по вашим желаниям</h2>
+        <!-- Преимущества (сразу после шапки) -->
+        <section class="section" id="advantages">
+            <div class="container">
+                <h3 class="section-subtitle">Ваш персонализированный кофе</h3>
+                <h2 class="section-title">Кофе сделанный по вашим желаниям</h2>
 
-            <ul class="grid cols-4 gap-lg">
-                <li class="card padding-md border rounded bg-white">
-                    <img class="icon" src="assets/icons/ic.png" alt="Кофе1">
-                    <h3 class="card-title">Происхождение кофе</h3>
-                    <p class="text">Кофе в зернах Арабика и робуста одинакового качества. Vеждународные стандарты.</p>
-                </li>
+                <!-- Нестандартная сетка разной высоты -->
+                <ul class="advantages-grid">
+                    <li class="card card--adv padding-md adv-span-2">
+                        <img class="icon" src="assets/icons/ic.png" alt="Кофе1">
+                        <h3 class="card-title">Происхождение кофе</h3>
+                        <p class="text">Кофе в зернах Арабика и робуста одинакового качества. Vеждународные стандарты.</p>
+                    </li>
 
-                <li class="card padding-md border rounded bg-white">
-                    <img class="icon" src="assets/icons/coffee1.png" alt="Кофе2">
-                    <h3 class="card-title">Качество кофе</h3>
-                    <p class="text">Каждое кофейное зернышко - это единое целое. Процесс высокой концентрации кофейных мастеров</p>
-                </li>
+                    <li class="card card--adv padding-md adv-span-1">
+                        <img class="icon" src="assets/icons/coffee1.png" alt="Кофе2">
+                        <h3 class="card-title">Качество кофе</h3>
+                        <p class="text">Каждое кофейное зернышко - это единое целое. Процесс высокой концентрации кофейных мастеров</p>
+                    </li>
 
-                <li class="card padding-md border rounded bg-white">
-                    <img class="icon" src="assets/icons/beans.png" alt="Кофе3">
-                    <h3 class="card-title">Зерна</h3>
-                    <p class="text">Качество чашки кофе на 70% зависит от происхождения и качества зеленых зерен.</p>
-                </li>
+                    <li class="card card--adv padding-md adv-span-3">
+                        <img class="icon" src="assets/icons/beans.png" alt="Кофе3">
+                        <h3 class="card-title">Зерна</h3>
+                        <p class="text">Качество чашки кофе на 70% зависит от происхождения и качества зеленых зерен.</p>
+                    </li>
 
-                <li class="card padding-md border rounded bg-white">
-                    <img class="icon" src="assets/icons/cup.png" alt="Кофе4">
-                    <h3 class="card-title">Обжарка</h3>
-                    <p class="text">Кофейные зерна подвергаются тщательной и тщательной обжарке.</p>
-                </li>
-            </ul>
+                    <li class="card card--adv padding-md adv-span-2">
+                        <img class="icon" src="assets/icons/cup.png" alt="Кофе4">
+                        <h3 class="card-title">Обжарка</h3>
+                        <p class="text">Кофейные зерна подвергаются тщательной и тщательной обжарке.</p>
+                    </li>
+                </ul>
+            </div>
         </section>
 
+        <!-- Правильный вкус -->
         <section class="section bg-light" id="products">
             <div class="container">
                 <h3 class="section-subtitle">Выбери свой любимый</h3>
                 <h2 class="section-title">Правильный вкус</h2>
 
-                <div class="grid cols-4 gap-lg">
-                    <article class="card product padding-md border rounded bg-white">
+                <div class="products-grid">
+                    <article class="card product padding-md">
                         <img class="product-img" src="assets/img/pack-yellow.png" alt="Желтый пакет">
                         <p class="price">99.000</p>
                         <h3 class="card-title">REVO Morning</h3>
@@ -77,7 +84,7 @@
                         </div>
                     </article>
 
-                    <article class="card product padding-md border rounded bg-white">
+                    <article class="card product padding-md">
                         <img class="product-img" src="assets/img/pack-blue.png" alt="Голубой пакет">
                         <p class="price">85.000</p>
                         <h3 class="card-title">REVO Everyday</h3>
@@ -88,8 +95,8 @@
                         </div>
                     </article>
 
-                    <article class="card product padding-md border rounded bg-white">
-                        <img class="product-img" src="assets/img/pack-orange.png" alt="Оранжевый пакет">
+                    <article class="card product padding-md">
+                        <img class="product-img" src="assets/img/pack-red.png" alt="Красный пакет">
                         <p class="price">139.000</p>
                         <h3 class="card-title">REVO Origin</h3>
                         <p class="text">сладковатое послевкусие, немного горьковатое, кисло-клубничное</p>
@@ -99,7 +106,7 @@
                         </div>
                     </article>
 
-                    <article class="card product padding-md border rounded bg-white">
+                    <article class="card product padding-md">
                         <img class="product-img" src="assets/img/pack-brown.png" alt="Коричневый пакет">
                         <p class="price">75.000</p>
                         <h3 class="card-title">REVO Rich</h3>
@@ -113,44 +120,56 @@
             </div>
         </section>
 
-        <section class="section container" id="giftset">
-            <h3 class="section-subtitle">Лучший подарок для друга</h3>
-            <h2 class="section-title">Подарочный набор</h2>
+        <!-- Giftset -->
+        <section class="section" id="giftset">
+            <div class="container">
+                <h3 class="section-subtitle">Лучший подарок для друга</h3>
+                <h2 class="section-title">Подарочный набор</h2>
 
-            <article class="card giftset padding-md border rounded bg-white">
-                <img class="gift-img" src="assets/img/package.png" alt="Подарочный набор">
+                <article class="card giftset padding-lg">
+                    <div class="giftset-grid">
+                        <img class="gift-img" src="assets/img/package.png" alt="Подарочный набор">
 
-                <h3 class="card-title">Подарочный набор «Вьетнамский фильтрованный кофе»</h3>
-                <p class="text">Отличный подарок для ценителей кофе. Кофейные зерна тщательно отбираются компанией Revo, обжариваются и измельчаются по технологии и секретам, полученным от известных мастеров, с любовью и страстью кофеваров... создавая чашки чистого кофе специально для вас.</p>
+                        <div class="gift-body">
+                            <h3 class="card-title">Подарочный набор «Вьетнамский фильтрованный кофе»</h3>
+                            <p class="text">Отличный подарок для ценителей кофе. Кофейные зерна тщательно отбираются компанией Revo, обжариваются и измельчаются по технологии и секретам, полученным от известных мастеров, с любовью и страстью кофеваров... создавая чашки чистого кофе специально для вас.</p>
 
-                <div class="specs grid gap-sm">
-                    <div class="spec">
-                        <img class="spec-icon" src="assets/icons/beans.png" alt="Зерна">
-                        <p class="spec-label text">Тип семян</p>
-                        <p class="spec-value">Изысканная смесь Робусты</p>
+                            <div class="specs">
+                                <div class="spec">
+                                    <img class="spec-icon" src="assets/icons/beans.png" alt="Зерна">
+                                    <div class="spec-text">
+                                        <p class="spec-label text">Тип семян</p>
+                                        <p class="spec-value">Изысканная смесь Робусты</p>
+                                    </div>
+                                </div>
+
+                                <div class="spec">
+                                    <img class="spec-icon" src="assets/icons/mountain.png" alt="Гора">
+                                    <div class="spec-text">
+                                        <p class="spec-label text">Высота</p>
+                                        <p class="spec-value">700-800 метров</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-sm">
+                                <button class="btn btn-primary">КУПИТЬ СЕЙЧАС</button>
+                                <button class="btn btn-outline">ПОДРОБНОСТИ</button>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="spec">
-                        <img class="spec-icon" src="assets/icons/mountain.png" alt="Гора">
-                        <p class="spec-label text">Высота</p>
-                        <p class="spec-value">700-800 метров</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-sm">
-                    <button class="btn btn-primary">КУПИТЬ СЕЙЧАС</button>
-                    <button class="btn btn-outline">ПОДРОБНОСТИ</button>
-                </div>
-            </article>
+                </article>
+            </div>
         </section>
 
+        <!-- Combo -->
         <section class="section bg-light" id="combo">
             <div class="container">
                 <h3 class="section-subtitle">Ваш персонализированный кофе</h3>
                 <h2 class="section-title">Комбо-наборы</h2>
 
-                <div class="grid cols-3 gap-lg">
-                    <article class="card combo padding-md border rounded bg-white">
+                <div class="combo-grid">
+                    <article class="card combo padding-md">
                         <img class="product-img" src="assets/img/pack-cup.png" alt="Коричневый набор">
                         <p class="price">147.000 155.000</p>
                         <h3 class="card-title">Комбо Revo Rich</h3>
@@ -161,7 +180,7 @@
                         </div>
                     </article>
 
-                    <article class="card combo padding-md border rounded bg-white">
+                    <article class="card combo padding-md">
                         <img class="product-img" src="assets/img/pack-cup-blue.png" alt="Коричневый набор">
                         <p class="price">156.000 165.000</p>
                         <h3 class="card-title">Комбо Revo Everyday</h3>
@@ -172,7 +191,7 @@
                         </div>
                     </article>
 
-                    <article class="card combo padding-md border rounded bg-white">
+                    <article class="card combo padding-md">
                         <img class="product-img" src="assets/img/pack-cup-red.png" alt="Коричневый набор">
                         <p class="price">260.000 275.000</p>
                         <h3 class="card-title">Комбо Revo Honey</h3>
@@ -187,8 +206,10 @@
         </section>
     </main>
 
-    <footer class="footer container" id="footer">
-        <p class="text">© Revo Coffee Việt Nam - 2018</p>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p class="text">© Revo Coffee Việt Nam - 2018</p>
+        </div>
     </footer>
 </body>
 </html>
