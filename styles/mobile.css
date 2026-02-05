@@ -1,0 +1,73 @@
+/* Планшет (1024px и меньше) */
+@media (max-width: 1024px){
+  .container{ width:min(var(--container), calc(100% - 30px)); }
+  /* меню чуть уже на планшете */
+  .nav--overlay{ width:260px; }
+}
+
+/* Планшет и мобильные (768px и меньше) */
+@media (max-width: 768px){
+  /* Шаг 4: фиксация меню (шапки) */
+  .header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  /* Показываем гамбургер */
+  .menu-toggle{ display:flex; }
+
+  /* Меню: off-canvas справа */
+  .nav.nav--overlay{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    padding: 90px 22px 22px;
+    background: rgba(47,65,87,.98);
+    transition: right 0.4s ease;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  .nav.nav--overlay.active{
+    right: 0;
+  }
+
+  .nav-list{ gap: 0; }
+  .nav-item{ width:100%; }
+  .link{
+    display:block;
+    width:100%;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+    font-size: 13px;
+  }
+  .link:hover{
+    transform:none;
+    background: rgba(255,255,255,.12);
+  }
+
+  /* Затемнение фона при открытом меню */
+  .nav-overlay{
+    display:none;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+  }
+  .nav-overlay.active{ display:block; }
+
+  /* чтобы шапка не перекрывала контент при sticky */
+  .main{ position: relative; z-index: 1; }
+}
+
+/* Мобильные (480px и меньше) */
+@media (max-width: 480px){
+  .nav.nav--overlay{ width:100%; }
+  body{ font-size:17px; }
+  .logo{ width:100px; }
+}
