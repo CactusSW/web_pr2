@@ -7,11 +7,24 @@
 
 /* Планшет и мобильные (768px и меньше) */
 @media (max-width: 768px){
-  /* Шаг 4: фиксация меню (шапки) */
-  .header{
-    position: sticky;
+  /* Шаг 4: фиксируем ВЕРХНЮЮ панель (логотип/иконки),
+     а не весь блок .header с баннером (иначе "залипает" пол-экрана) */
+  .header{ overflow: visible; }
+  .header-top{
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    right: 0;
+    z-index: 1100;
+    background: var(--white);
+    padding: 10px 0;
+  }
+
+  /* Добавляем отступ сверху, чтобы контент не прятался под fixed-панелью */
+  .main{
+    padding-top: 76px;
+    position: relative;
+    z-index: 1;
   }
 
   /* Показываем гамбургер */
@@ -27,7 +40,7 @@
     padding: 90px 22px 22px;
     background: rgba(47,65,87,.98);
     transition: right 0.4s ease;
-    z-index: 1000;
+    z-index: 1090;
     overflow-y: auto;
   }
   .nav.nav--overlay.active{
@@ -57,12 +70,11 @@
     width:100%;
     height:100%;
     background: rgba(0,0,0,0.5);
-    z-index: 999;
+    z-index: 1080;
   }
   .nav-overlay.active{ display:block; }
 
-  /* чтобы шапка не перекрывала контент при sticky */
-  .main{ position: relative; z-index: 1; }
+  /* (правило .main выше) */
 }
 
 /* Мобильные (480px и меньше) */
